@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     background-color: #1e1e1e; /* Very dark gray background */
-    color: #00ff00; /* Green text */
+    color:  #ffffff ; /* Green text */
     font-family: 'Courier New', Courier, monospace; /* Monospace font for terminal look */
     font-size: 16px; /* Base font size */
     line-height: 1.5;
@@ -41,7 +41,7 @@ nav {
       padding: 10px;
       transition: background 0.2s;
       a {
-        color: #00ff00;
+        color:  #ffffff ;
         text-decoration: none;
         text-transform: uppercase;
         transition: color 0.2s;
@@ -53,10 +53,10 @@ nav {
         display: block;
         margin: 12px -12px;
         padding: 0;
-        background: #00ff00;
-        border: 2px solid #00ff00;
-        border-right: 2px solid #00ff00;
-        border-bottom: 2px solid #00ff00;
+        background:  #ffffff ;
+        border: 2px solid  #ffffff ;
+        border-right: 2px solid  #ffffff ;
+        border-bottom: 2px solid  #ffffff ;
         border-radius: 5px;
         transition: opacity 0.2s, visibility 0.2s;
         li {
@@ -106,13 +106,29 @@ nav {
   }
 /* Header */
 header {
-    padding: 20px;
+    padding: 25px;
     text-align: left;
-    font-size: 2em;
+    font-size: 24px;
     font-weight: bold;
-    border-bottom: 2px solid #00ff00;
+    border-bottom: 2px solid  #ffffff ;
 }
 
+/* text animation */
+@keyframes animated-text{
+    from{width: 0;}
+    to{width: 472px;}
+  }
+  /* cursor animations */
+ @keyframes animated-cursor{
+    from{border-right-color: rgba(0,255,0,.75);}
+    to{border-right-color: transparent;}
+  }
+h1 {
+    padding: 10px;
+    margin-top: 75px;
+    overflow: hidden;  
+    animation: animated-cursor 600ms steps(29,end) infinite;
+}
 /* Main Content */
 main {
     padding: 20px;
@@ -121,8 +137,8 @@ main {
 
 /* Section Headers */
 h2 {
-    font-size: 1.5em;
-    border-bottom: 1px solid #00ff00;
+    font-size: 30px;
+    border-top: 1px solid  #ffffff ;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
@@ -143,6 +159,21 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: 0.9em;
-    border-top: 2px solid #00ff00;
+    border-top: 2px solid  #ffffff ;
     margin-top: 20px;
 }
+
+.text-image-container {
+    display: flex;
+    align-items: right; /* Aligns text and image vertically */
+  }
+  
+  .text-image-container p {
+    margin-right: 10px; /* Adds some spacing between the text and the image */
+  }
+  
+  .text-image-container img {
+    width: 240px; /* Adjust size as needed */
+    height: auto;
+  }
+  
