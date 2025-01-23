@@ -19,23 +19,42 @@
               </nav>
           
           </section>
-        <div class="text-image-container">
-            <h1>Hi, I'm Tyler... I like to fix (and sometimes break) computers.</h1>
-            <img src="TylerDealHeadshot.jpg" alt="whatILookLike" style="border: 20px solid  #ffffff ; border-radius: 20px;">
-        </div>
     </header>
 
     <!-- Main Content Section -->
     <main>
+        <div class="text-image-container">
+            <h1>Hi, I'm Tyler... I like to fix (and sometimes break) computers.</h1>
+            <img src="TylerDealHeadshot.jpg" alt="whatILookLike" style="border: 20px solid  #ffffff ; border-radius: 20px;">
+        </div>
         <h1 style="text-align: center; font-size: 40px;">Projects:</h1>
         <section id="section1">
             <h2>My Homelab</h2>
-            <p>This is my biggest cumlative project. Most of my other IT related  </p>
+            <p>This is my biggest cumlative project. Most of my other IT related projects will fall under this. My current hardware consists of:</p>
+            <ol>
+                <li>An Optiplex running OPNSense.</li>
+                <li>An unmanaged netgear switch for essential functions. (low power option)</li>
+                <li>A manager Juniper Switch EX3300 for for additional devices.</li>
+                <li>An unused desktop gaming PC which serves as my main compute.</li>
+                <li>A dell poweredge which serves as additional compute when I don't have to worry about power consumption.</li>
+                <li>Raspberry Pi running Pi-Hole and Tailscale. It is my tailscale exit node.</li>
+                <li>My personal PC, which is where I manage everything from.</li>
+            </ol>
+            <p>I typically prefer the lower power options I have. The old desktop PC and the small switch are servicable while costing less for me to run. As I also live with roommates, this help's keep their power bill low too.</p>
         </section>
 
         <section id="section2">
-            <h2>Section 2 Header</h2>
-            <p><!-- Add your content here --></p>
+            <h2>Pi-hole and Tailscale(RaspberryPi)</h2>
+            <p>I'm grouping these into one section as they run on the same device, and were both deployed at a similar time.</p>
+            <h3>Pi-hole</h3>
+            <p><a href="https://pi-hole.net">Pi-hole</a> is a super popular and very easy to set up custom DNS server that blocks advertisements. This was my first "homelab" project that and it was a great starting point for me to learn about DNS, DHCP, and how networking works.</p>
+            <p>Steps:</p>
+            <ol>
+                <li>Install RaspberryOS</li>
+                <li>I literally just ran this: "curl -sSL https://install.pi-hole.net | bash"</li>
+                <li>I configured the server through the GUI. Setting passwords and adding blocklists.</li>
+                <li>I then configured my router to use the Pi-hole for DNS queries.</li>
+            </ol>
         </section>
 
         <!-- Add more sections as needed -->
